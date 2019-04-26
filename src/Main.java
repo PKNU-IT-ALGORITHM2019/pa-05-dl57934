@@ -37,10 +37,12 @@ public class Main {
                 } else if (compareWord(command, "deleteAll") == SAME) {
                    BufferedReader bfr2 = getDeleteWords();
                     String line;
+                    int size = 0;
                     while((line = bfr2.readLine()) != null){
-                        System.out.println(line);
+                        size+=1;
                         bst.deleteKey(line);
                     }
+                    System.out.println("Complete Delete " +size);
                 } else if (compareWord(command, "delete") == SAME) {
                     String deleteWord = bfr.readLine();
                     bst.deleteKey(deleteWord);
